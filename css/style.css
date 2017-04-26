@@ -1,0 +1,66 @@
+main {
+    width: 600px;
+    margin: 0 auto;
+}
+
+ul.liste-icons {
+    list-style-type: none;
+}
+
+ul.liste-icons > li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.liste-annonces > article {
+    position: relative;
+    margin-bottom: 35px;
+    padding: 10px;
+    background-color: rgba(255,255,157, 0.7);
+}
+
+.liste-annonces > article > header:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.liste-annonces > article:hover .annonce-prix {
+    transform: scale(1.1);
+}
+
+.liste-annonces .annonce-prix {
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    transition: transform 0.5s;
+    transform: rotate(15deg);
+    background-color: rgba(0, 163, 136, 0.7);
+    color: white;
+}
+
+.liste-annonces .annonce-img {
+    float: left;
+    width: 200px;
+    margin: 0 10px 10px 0;
+}
+
+.liste-annonces > article > footer {
+    text-align: right;
+}
+
+.liste-annonces > article > footer img {
+    height: 50px;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+.liste-annonces > article > footer span {
+    display: inline-block;
+    vertical-align: middle;
+}
