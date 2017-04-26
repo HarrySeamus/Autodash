@@ -5,4 +5,4 @@ $db_name = "autodash";
 $db_user = "root";
 $db_pass = "root";
 
-$siteurl = "http://localhost:8888/autodash/";
+$siteurl = "http://localhost:8888/";

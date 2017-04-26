@@ -7,7 +7,7 @@ require_once __DIR__ . '/../security.php';
     <head>
         <title>Administration</title>
         <link rel="stylesheet" type="text/css" href="<?php echo $siteurl; ?>admin/jquery-ui/jquery-ui.css"  media="screen" />
-        <link rel="stylesheet" href="<?php echo $siteurl; ?>admin/css/style.css"/>
+        <link rel="stylesheet" href="<?php echo $siteurl; ?>css/style.css"/>
     </head>
     <body>
 
