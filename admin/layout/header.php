@@ -8,6 +8,7 @@ require_once __DIR__ . '/../security.php';
         <title>Administration</title>
         <link rel="stylesheet" type="text/css" href="<?php echo $siteurl; ?>admin/jquery-ui/jquery-ui.css"  media="screen" />
         <link rel="stylesheet" href="<?php echo $siteurl; ?>css/style.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 
@@ -18,12 +19,25 @@ require_once __DIR__ . '/../security.php';
             </p>
 
         </div>
-        <nav>
-            <ul>
-                <li><a href="<?php echo $siteurl; ?>admin/crud/clients/">Clients</a></li>
-                <li><a href="<?php echo $siteurl; ?>admin/crud/projets/">Projets</a></li>
-                <li><a href="<?php echo $siteurl; ?>admin/">Dashboard</a></li>
-                <li><a href="<?php echo $siteurl; ?>">Front</a></li>
-                <li><a href="<?php echo $siteurl; ?>admin/logout.php">Déconnexion</a></li>
-            </ul>
-        </nav>
+
+      <div class="vertical-navigation">
+        <div class="nav-logo nav-logo-one">
+          <a href="<?php echo $siteurl; ?>admin/crud/clients/"><i class="fa fa-address-card-o" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="nav-logo nav-logo-one">
+          <a href="<?php echo $siteurl; ?>admin/crud/projets/"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="nav-logo nav-logo-one">
+          <a href="<?php echo $siteurl; ?>admin/"><i class="fa fa-bullseye" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="nav-logo nav-logo-one">
+          <a href="<?php echo $siteurl; ?>"><i class="fa fa-bullseye" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="nav-logo nav-logo-one">
+          <a href="<?php echo $siteurl; ?>admin/logout.php"><i class="fa fa-bullseye" aria-hidden="true"></i></a>
+        </div>
+      </div>
