@@ -21,23 +21,24 @@ require_once __DIR__ . '/../security.php';
         </div>
 
       <div class="vertical-navigation">
+
         <div class="nav-logo nav-logo-one">
-          <a href="<?php echo $siteurl; ?>admin/crud/clients/"><i class="fa fa-address-card-o" aria-hidden="true"></i></a>
+          <a href="<?php echo $siteurl; ?>"><i class="fa fa-tachometer" aria-hidden="true"></i></a>
         </div>
 
         <div class="nav-logo nav-logo-one">
-          <a href="<?php echo $siteurl; ?>admin/crud/projets/"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+          <a href="<?php echo $siteurl; ?>admin/crud/clients/"><i class="fa fa-address-book-o" aria-hidden="true"></i></a>
         </div>
 
         <div class="nav-logo nav-logo-one">
-          <a href="<?php echo $siteurl; ?>admin/"><i class="fa fa-bullseye" aria-hidden="true"></i></a>
+          <a href="<?php echo $siteurl; ?>admin/crud/projets/"><i class="fa fa-rocket" aria-hidden="true"></i></a>
         </div>
 
         <div class="nav-logo nav-logo-one">
-          <a href="<?php echo $siteurl; ?>"><i class="fa fa-bullseye" aria-hidden="true"></i></a>
+          <a href="<?php echo $siteurl; ?>admin/"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
         </div>
 
         <div class="nav-logo nav-logo-one">
-          <a href="<?php echo $siteurl; ?>admin/logout.php"><i class="fa fa-bullseye" aria-hidden="true"></i></a>
+          <a href="<?php echo $siteurl; ?>admin/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
         </div>
       </div>
