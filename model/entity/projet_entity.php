@@ -1,15 +1,11 @@
 <?php
 
-function getAllType_projet($type_projet_id){
+function getAllTypeProjet(){
     global $connection;
 
-    $query = "SELECT *
-    FROM type_projet
-    WHERE type_projet.type_projet_id = :type_projet_id
-    ;";
+    $query = "SELECT id, nom FROM type_projet;";
 
     $stmt = $connection->prepare($query);
-    $stmt->bindParam(':type_projet_id', $type_projet_id);
     $stmt->execute();
 
     return $stmt->fetchAll();
@@ -64,7 +60,7 @@ function getProjet($id) {
     $stmt->bindParam(':id', $id);
     $stmt->execute();
 
-    return $stmt->fetchAll();
+    return $stmt->fetch();
 }
 
 function insertProjet($nom, $date_crea, $avancement,$utilisateur_id, $client_id, $type_projet_id) {
@@ -79,6 +75,27 @@ function insertProjet($nom, $date_crea, $avancement,$utilisateur_id, $client_id,
     $stmt->bindParam(':date_crea', $date_crea);
     $stmt->bindParam(':avancement', $avancement);
     $stmt->bindParam(':utilisateur_id', $utilisateur_id);
+    $stmt->bindParam(':client_id', $client_id);
+    $stmt->bindParam(':type_projet_id', $type_projet_id);
+    $stmt->execute();
+}
+
+function updateProjet($id, $nom, $avancement, $client_id, $type_projet_id) {
+    /* @var $connection PDO */
+    global $connection;
+
+    $query = "UPDATE projet
+    SET nom = :nom,
+        avancement = :avancement,
+        client_id = :client_id,
+        type_projet_id = :type_projet_id
+    WHERE id = :id
+    ;";
+
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(':id', $id);
+    $stmt->bindParam(':nom', $nom);
+    $stmt->bindParam(':avancement', $avancement);
     $stmt->bindParam(':client_id', $client_id);
     $stmt->bindParam(':type_projet_id', $type_projet_id);
     $stmt->execute();
