@@ -3,6 +3,8 @@ require_once '../../../model/database.php';
 require_once '../../layout/header.php';
 
 $liste_clients = getAllClients($user['id']);
+
+
 ?>
 
 <h1>Ajouter un nouveau Projet</h1>
@@ -35,7 +37,7 @@ $liste_clients = getAllClients($user['id']);
         <label>Type de projet</label>
         <select name="type_projet_id">
             <?php foreach ($type_projet_id as $type_projet) : ?>
-                <option value="<?php echo $type_projet_id['type_projet_nom']; ?>>
+                <option value="<?php echo $type_projet_id['type_projet_nom']; ?>">
                     <?php echo $type_projet_id['nom']; ?>
                 </option>
             <?php endforeach; ?>
