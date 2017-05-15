@@ -22,9 +22,9 @@
     <div class="buttonPart">
       <button type="submit"><span>GO</span></button>
     </div>
-     <div class="buttonLogin">
+<!--  <div class="buttonLogin">
       <button type="submit"><span>S'inscrire</span></button>
-    </div>
+    </div> -->
   </div>
 </form>
 
