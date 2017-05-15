@@ -63,16 +63,15 @@ function getProjet($id) {
     return $stmt->fetch();
 }
 
-function insertProjet($nom, $date_crea, $avancement,$utilisateur_id, $client_id, $type_projet_id) {
+function insertProjet($nom, $avancement,$utilisateur_id, $client_id, $type_projet_id) {
     global $connection;
 
     $query = "INSERT INTO projet (nom, date_crea, avancement, utilisateur_id, client_id, type_projet_id)
-    VALUES (:nom, :date_crea, :avancement, :utilisateur_id, :client_id, :type_projet_id)
+    VALUES (:nom, NOW(), :avancement, :utilisateur_id, :client_id, :type_projet_id)
     ";
 
     $stmt = $connection->prepare($query);
     $stmt->bindParam(':nom', $nom);
-    $stmt->bindParam(':date_crea', $date_crea);
     $stmt->bindParam(':avancement', $avancement);
     $stmt->bindParam(':utilisateur_id', $utilisateur_id);
     $stmt->bindParam(':client_id', $client_id);
